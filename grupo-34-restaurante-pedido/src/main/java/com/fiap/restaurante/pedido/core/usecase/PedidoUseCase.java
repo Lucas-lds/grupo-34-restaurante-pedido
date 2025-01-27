@@ -8,6 +8,7 @@ import org.apache.coyote.BadRequestException;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.UUID;
 
 @Component
 public class PedidoUseCase implements PedidoUseCasePortOut {
@@ -19,24 +20,24 @@ public class PedidoUseCase implements PedidoUseCasePortOut {
     }
 
     @Override
-    public PedidoResponse atualizarStatusPedido(Integer status, Long id) throws BadRequestException {
+    public PedidoResponse atualizarStatusPedido(Integer status, UUID id) throws BadRequestException {
         return PedidoResponse.fromDomain(pedidoServicePortOut.atualizarStatusPedido(status, id));
     }
 
     @Override
-    public PedidoResponse checkoutPedido(PedidoRequest pedido) {
-        return PedidoResponse.fromDomain(pedidoServicePortOut.checkoutPedido(pedido.toDomain()));
+    public void checkoutPedido(PedidoRequest pedido) {
+        pedidoServicePortOut.checkoutPedido(pedido.toDomain());
     }
 
     @Override
-    public PedidoResponse listarPedidoPorId(Long id) {
+    public PedidoResponse listarPedidoPorId(UUID id) {
         return PedidoResponse.fromDomain(pedidoServicePortOut.listarPedidoPorId(id));
     }
 
     @Override
     public List<PedidoResponse> listarPedidos() {
         return pedidoServicePortOut.listarPedidos().stream()
-            .map(pedido -> PedidoResponse.fromDomain(pedido)).toList();
+                .map(pedido -> PedidoResponse.fromDomain(pedido)).toList();
     }
-    
+
 }

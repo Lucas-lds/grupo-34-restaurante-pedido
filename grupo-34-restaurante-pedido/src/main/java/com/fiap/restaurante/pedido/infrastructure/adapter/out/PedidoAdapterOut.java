@@ -3,21 +3,17 @@ package com.fiap.restaurante.pedido.infrastructure.adapter.out;
 
 import com.fiap.restaurante.pedido.application.port.out.PedidoAdapterPortOut;
 import com.fiap.restaurante.pedido.core.domain.Pedido;
-import com.fiap.restaurante.pedido.core.domain.PedidoProduto;
+import com.fiap.restaurante.pedido.core.domain.ProdutoQuantidade;
 import com.fiap.restaurante.pedido.core.domain.enums.OrderStatus;
-import com.fiap.restaurante.pedido.core.domain.enums.PaymentStatus;
-import com.fiap.restaurante.pedido.infrastructure.adapter.out.entity.PagamentoEntity;
 import com.fiap.restaurante.pedido.infrastructure.adapter.out.entity.PedidoEntity;
-import com.fiap.restaurante.pedido.infrastructure.adapter.out.entity.PedidoProdutoEntity;
-import com.fiap.restaurante.pedido.infrastructure.adapter.out.repository.PagamentoRepository;
-import com.fiap.restaurante.pedido.infrastructure.adapter.out.repository.PedidoProdutoRepository;
 import com.fiap.restaurante.pedido.infrastructure.adapter.out.repository.PedidoRepository;
-import com.fiap.restaurante.pedido.infrastructure.adapter.out.repository.ProdutoRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.time.LocalDateTime;
 import java.util.List;
+import java.util.UUID;
 
 @Component
 public class PedidoAdapterOut implements PedidoAdapterPortOut {
@@ -25,76 +21,67 @@ public class PedidoAdapterOut implements PedidoAdapterPortOut {
     @Autowired
     private PedidoRepository pedidoRepository;
     @Autowired
-    private ProdutoRepository produtoRepository;
-    @Autowired
-    private PedidoProdutoRepository pedidoProdutoRepository;
-    @Autowired
-    private PagamentoRepository pagamentoRepository;
-    @Autowired
     private ModelMapper mapper;
 
 
     @Override
-    public Pedido atualizarStatusPedido(OrderStatus status, Long id) {
+    public Pedido atualizarStatusPedido(OrderStatus status, UUID id) {
         var pedido = pedidoRepository.findById(id);
         pedido.ifPresent(t -> {
-            t.setStatus(status);
+            t.setStatus(status.toString());
             pedidoRepository.save(t);
         });
         return mapper.map(pedido.get(), Pedido.class);
     }
 
     @Override
-    public Pedido checkoutPedido(Pedido pedido) {
+    public void checkoutPedido(Pedido pedido) {
         var pedidoEntity = new PedidoEntity();
-        pedidoEntity.setStatus(pedido.getStatus());
+        pedidoEntity.setId(UUID.randomUUID().toString());
+        pedidoEntity.setCreatedAt(LocalDateTime.now());
+        pedidoEntity.setStatus(String.valueOf(pedido.getStatus()));
         pedidoEntity.setIdCliente(pedido.getIdCliente());
-        var pedidoSaved = this.pedidoRepository.save(pedidoEntity);
-        pedido.getListaPedidoProdutos().forEach((pedidoProduto) -> {
-            var entity = new PedidoProdutoEntity();
-            entity.setPedido(pedidoSaved);
-            var produto = this.produtoRepository.findById(pedidoProduto.getProduto().getIdProduto());
-            entity.setProduto(produto.get());
-            entity.setQuantidade(pedidoProduto.getQuantidade());
-            this.pedidoProdutoRepository.save(entity);
-        });
 
-        var pedidoRep = mapper.map(pedidoRepository.save(pedidoEntity), Pedido.class);
+        pedidoEntity.setProdutos(pedido.getListaProdutoQuantidade().stream()
+                .map(ProdutoQuantidade::toEntity).toList());
 
-        //Gerar o QRCode e inserir no registro de pagamento
-        var pagamento = new PagamentoEntity();
-        pagamento.setIdPedido(pedidoRep.getId());
-        pagamento.setStatus(PaymentStatus.PENDING);
-        pagamentoRepository.save(pagamento);
+        //TODO enviar pagamento
 
-        return pedidoRep;
+        this.pedidoRepository.save(pedidoEntity);
     }
 
     @Override
-    public Pedido listarPedidoPorId(Long id) {
+    public Pedido listarPedidoPorId(UUID id) {
+        //TODO preencher produto
         var pedido = pedidoRepository.findById(id);
-        if(pedido.isPresent()){
-            return preencherPedido(id);
+        if (pedido.isPresent()) {
+            return pedido.get().toDomain();
+        } else {
+            throw new RuntimeException("Pedido não encontrado");
         }
-        throw new RuntimeException("Pedido não encontrado");
+
     }
 
     @Override
     public List<Pedido> listarPedidos() {
+        //TODO preencher produto
         var listaPedidos = pedidoRepository.findAllOrderedByStatus();
-        return listaPedidos.stream().map(pedido -> preencherPedido(pedido.getId())).toList();
+        return listaPedidos.stream().map(PedidoEntity::toDomain).toList();
     }
-    
 
-    private Pedido preencherPedido(Long id){
-        var listaPedidoProduto = this.pedidoProdutoRepository.findByPedidoId(id);
-        var pedidoResponse = new Pedido();
-        var listaProdutos = listaPedidoProduto.stream()
-            .map(pedidoProduto -> new PedidoProduto(pedidoProduto.getProduto().toDomain(), pedidoProduto.getQuantidade())).toList();
-        pedidoResponse.setListaPedidoProdutos(listaProdutos);
-        pedidoResponse.setId(listaPedidoProduto.get(0).getPedido().getId());
-        pedidoResponse.setIdCliente(listaPedidoProduto.get(0).getPedido().getIdCliente());
-        pedidoResponse.setStatus((listaPedidoProduto.get(0).getPedido().getStatus()));
-        return pedidoResponse;
+
+    private Pedido preencherProduto(Long id) {
+        //TODO Chamada para api de produto para preencher os produtos
+        //TODO será utilizado na listagem de pedido na hora exibir
+        return null;
+    }
+
+    private void enviarPagamento() {
+        //TODO chamada para o serviço de pagamento
+        //TODO essa chamada também será enviada para outro microserviço
+//        var pagamento = new PagamentoEntity();
+//        pagamento.setIdPedido(pedidoRep.getId());
+//        pagamento.setStatus(PaymentStatus.PENDING);
+//        pagamentoRepository.save(pagamento);
     }
 }

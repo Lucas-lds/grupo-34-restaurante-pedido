@@ -1,32 +1,32 @@
+version: '3.7'
 services:
-  mysql:
-    image: mysql:8.0
-    container_name: mysql-db
+  dynamodb:
+    image: amazon/dynamodb-local:latest
+    container_name: dynamodb
     restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: pedidoDB
-      MYSQL_USER: user
-      MYSQL_PASSWORD: password
     ports:
-      - "3306:3306"
+      - "8000:8000"  # A porta do DynamoDB Local continua sendo 8000
+    command: "-jar DynamoDBLocal.jar -sharedDb -dbPath /home/dynamodblocal/data"
     volumes:
-      - mysql-data:/var/lib/mysql
+      - ./data:/home/dynamodblocal/data  # Caminho do volume ajustado
     networks:
       - app-network
 
-  adminer:
-    image: adminer
-    container_name: adminer
-    restart: always
+  dynamodb-admin:
+    image: aaronshaf/dynamodb-admin
     ports:
-      - "8081:8080"
+      - "8001:8001"
+    environment:
+      DYNAMO_ENDPOINT: "http://dynamodb:8000"  # Corrigido de "dynamodb-local" para "dynamodb"
+      AWS_REGION: "us-west-2"
+      AWS_ACCESS_KEY_ID: local
+      AWS_SECRET_ACCESS_KEY: local
     networks:
-      - app-network
+      - app-network  # Certifique-se de que o dynamodb-admin está na mesma rede
 
 networks:
   app-network:
     driver: bridge
 
 volumes:
-  mysql-data:
+  dynamodb-data:

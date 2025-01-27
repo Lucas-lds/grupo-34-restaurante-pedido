@@ -6,10 +6,13 @@ import com.fiap.restaurante.pedido.infrastructure.adapter.in.request.StatusReque
 import com.fiap.restaurante.pedido.infrastructure.adapter.in.response.PedidoResponse;
 import io.swagger.v3.oas.annotations.Operation;
 import org.apache.coyote.BadRequestException;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import io.swagger.v3.oas.annotations.tags.Tag;
 
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/pedidos")
@@ -24,19 +27,20 @@ public class PedidoController {
 
     @Operation(summary = "Atualizar status do pedido", description = "Atualiza o status de um pedido.")
     @PutMapping("/{id}")
-    public PedidoResponse atualizarStatusPedido(@PathVariable Long id, @RequestBody StatusRequest statusRequest) throws BadRequestException {
+    public PedidoResponse atualizarStatusPedido(@PathVariable UUID id, @RequestBody StatusRequest statusRequest) throws BadRequestException {
         return pedidoUseCasePortOut.atualizarStatusPedido(statusRequest.status(), id);
     }
 
     @Operation(summary = "Checkout do pedido", description = "Finaliza o checkout de um pedido.")
     @PostMapping
-    public PedidoResponse checkoutPedido(@RequestBody PedidoRequest pedido) {
-        return pedidoUseCasePortOut.checkoutPedido(pedido);
+    public ResponseEntity<String> checkoutPedido(@RequestBody PedidoRequest pedido) {
+        pedidoUseCasePortOut.checkoutPedido(pedido);
+        return ResponseEntity.status(HttpStatus.CREATED).body("Pedido criado com sucesso");
     }
 
     @Operation(summary = "Buscar pedido por ID", description = "Busca um pedido específico pelo seu ID.")
     @GetMapping("/{id}")
-    public PedidoResponse getPedidoById(@PathVariable Long id) {
+    public PedidoResponse getPedidoById(@PathVariable UUID id) {
         return pedidoUseCasePortOut.listarPedidoPorId(id);
     }
 

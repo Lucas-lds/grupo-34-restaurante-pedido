@@ -5,14 +5,15 @@ import com.fiap.restaurante.pedido.core.domain.Pedido;
 import com.fiap.restaurante.pedido.core.domain.enums.OrderStatus;
 
 import java.util.List;
+import java.util.UUID;
 
 public interface PedidoAdapterPortOut {
 
-    Pedido atualizarStatusPedido(OrderStatus status, Long id);
+    Pedido atualizarStatusPedido(OrderStatus status, UUID id);
 
-    Pedido checkoutPedido(Pedido pedido);
+    void checkoutPedido(Pedido pedido);
 
-    Pedido listarPedidoPorId(Long id);
+    Pedido listarPedidoPorId(UUID id);
 
     List<Pedido> listarPedidos();
 }

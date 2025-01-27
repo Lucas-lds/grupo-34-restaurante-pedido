@@ -8,6 +8,7 @@ import org.apache.coyote.BadRequestException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.UUID;
 
 @Service
 public class PedidoService implements PedidoServicePortOut {
@@ -19,7 +20,7 @@ public class PedidoService implements PedidoServicePortOut {
     }
 
     @Override
-    public Pedido atualizarStatusPedido(Integer status, Long id) throws BadRequestException {
+    public Pedido atualizarStatusPedido(Integer status, UUID id) throws BadRequestException {
         if (status == 2)
             return pedidoAdapterPortOut.atualizarStatusPedido(OrderStatus.PREPARING, id);
         else if (status == 3)
@@ -33,13 +34,13 @@ public class PedidoService implements PedidoServicePortOut {
     }
 
     @Override
-    public Pedido checkoutPedido(Pedido pedido) {
+    public void checkoutPedido(Pedido pedido) {
         pedido.setStatus(OrderStatus.RECEIVED);
-        return pedidoAdapterPortOut.checkoutPedido(pedido);
+         pedidoAdapterPortOut.checkoutPedido(pedido);
     }
 
     @Override
-    public Pedido listarPedidoPorId(Long id) {
+    public Pedido listarPedidoPorId(UUID id) {
         return pedidoAdapterPortOut.listarPedidoPorId(id);
     }
 

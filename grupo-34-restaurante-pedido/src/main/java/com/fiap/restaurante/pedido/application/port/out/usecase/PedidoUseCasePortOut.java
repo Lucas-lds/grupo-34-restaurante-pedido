@@ -5,14 +5,15 @@ import com.fiap.restaurante.pedido.infrastructure.adapter.in.response.PedidoResp
 import org.apache.coyote.BadRequestException;
 
 import java.util.List;
+import java.util.UUID;
 
 public interface PedidoUseCasePortOut {
 
-    PedidoResponse atualizarStatusPedido(Integer status, Long id) throws BadRequestException;
+    PedidoResponse atualizarStatusPedido(Integer status, UUID id) throws BadRequestException;
 
-    PedidoResponse checkoutPedido(PedidoRequest pedido);
+    void checkoutPedido(PedidoRequest pedido);
 
-    PedidoResponse listarPedidoPorId(Long id);
+    PedidoResponse listarPedidoPorId(UUID id);
 
     List<PedidoResponse> listarPedidos();
 }

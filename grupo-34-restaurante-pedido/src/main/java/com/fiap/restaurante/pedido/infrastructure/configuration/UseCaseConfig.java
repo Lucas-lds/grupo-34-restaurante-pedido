@@ -13,14 +13,14 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class UseCaseConfig {
 
-    @Bean
-    public ClienteUseCasePortOut clienteUseCase(ClienteServicePortOut clienteService) {
-        return new ClienteUseCase(clienteService);
-    }
-  
-  @Bean
-    public ProdutoUseCasePortOut produtoUseCase(ProdutoServicePortOut produtoService) {
-        return new ProdutoUseCase(produtoService);
-    }
+//    @Bean
+//    public ClienteUseCasePortOut clienteUseCase(ClienteServicePortOut clienteService) {
+//        return new ClienteUseCase(clienteService);
+//    }
+//
+//  @Bean
+//    public ProdutoUseCasePortOut produtoUseCase(ProdutoServicePortOut produtoService) {
+//        return new ProdutoUseCase(produtoService);
+//    }
 
 }
