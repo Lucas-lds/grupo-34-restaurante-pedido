@@ -1,6 +1,7 @@
 package com.fiap.restaurante.pedido.infrastructure.adapter.out;
 
 
+import com.fiap.restaurante.pedido.application.port.out.PagamentoPortOut;
 import com.fiap.restaurante.pedido.application.port.out.PedidoAdapterPortOut;
 import com.fiap.restaurante.pedido.core.domain.Pedido;
 import com.fiap.restaurante.pedido.core.domain.ProdutoQuantidade;
@@ -22,6 +23,8 @@ public class PedidoAdapterOut implements PedidoAdapterPortOut {
     private PedidoRepository pedidoRepository;
     @Autowired
     private ModelMapper mapper;
+    @Autowired
+    private PagamentoPortOut pagamentoPortOut;
 
 
     @Override
@@ -45,7 +48,7 @@ public class PedidoAdapterOut implements PedidoAdapterPortOut {
         pedidoEntity.setProdutos(pedido.getListaProdutoQuantidade().stream()
                 .map(ProdutoQuantidade::toEntity).toList());
 
-        //TODO enviar pagamento
+        pagamentoPortOut.enviarPagamento(pedidoEntity);
 
         this.pedidoRepository.save(pedidoEntity);
     }
@@ -76,12 +79,4 @@ public class PedidoAdapterOut implements PedidoAdapterPortOut {
         return null;
     }
 
-    private void enviarPagamento() {
-        //TODO chamada para o serviço de pagamento
-        //TODO essa chamada também será enviada para outro microserviço
-//        var pagamento = new PagamentoEntity();
-//        pagamento.setIdPedido(pedidoRep.getId());
-//        pagamento.setStatus(PaymentStatus.PENDING);
-//        pagamentoRepository.save(pagamento);
-    }
 }
