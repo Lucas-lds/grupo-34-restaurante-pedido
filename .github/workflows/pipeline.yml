@@ -21,8 +21,9 @@ jobs:
 
       - name: Build application
         run: |
-          chmod +x mvnw # Concede permissão de execução ao Maven Wrapper
-          grupo-34-restaurante-pedido/mvnw clean package -DskipTests=true 
+          chmod +x grupo-34-restaurante-pedido/mvnw # Concede permissão de execução ao Maven Wrapper
+          cd grupo-34-restaurante-pedido
+          ./mvnw clean package -DskipTests=true
 
       - name: Upload application artifact
         uses: actions/upload-artifact@v4  # Atualizado para v4
