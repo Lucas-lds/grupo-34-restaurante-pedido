@@ -11,6 +11,15 @@ public class ProdutoQuantidade {
         this.quantidade = quantidade;
     }
 
+
+    public void setProduto(Produto produto) {
+        this.produto = produto;
+    }
+
+    public void setQuantidade(Integer quantidade) {
+        this.quantidade = quantidade;
+    }
+
     public Produto getProduto() {
         return produto;
     }

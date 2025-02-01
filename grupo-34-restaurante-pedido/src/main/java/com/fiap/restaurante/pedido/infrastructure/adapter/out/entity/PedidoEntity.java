@@ -17,7 +17,7 @@ public class PedidoEntity {
     private LocalDateTime createdAt;
     private String status;
     private Long idCliente;
-    private List<ProdutoQuantidadeEntity> produtos;
+    private List<ProdutoQuantidadeEntity> produtosQuantidades;
 
 
     public PedidoEntity() {
@@ -25,12 +25,12 @@ public class PedidoEntity {
 
     }
 
-    public PedidoEntity(String id, LocalDateTime createdAt, String status, Long idCliente, List<ProdutoQuantidadeEntity> produtos) {
+    public PedidoEntity(String id, LocalDateTime createdAt, String status, Long idCliente, List<ProdutoQuantidadeEntity> produtosQuantidades) {
         this.id = UUID.randomUUID().toString();
         this.createdAt = createdAt;
         this.status = status;
         this.idCliente = idCliente;
-        this.produtos = produtos;
+        this.produtosQuantidades = produtosQuantidades;
     }
 
 
@@ -73,19 +73,19 @@ public class PedidoEntity {
     }
 
     @DynamoDbAttribute("produtos")
-    public List<ProdutoQuantidadeEntity> getProdutos() {
-        return produtos;
+    public List<ProdutoQuantidadeEntity> getProdutosQuantidades() {
+        return produtosQuantidades;
     }
 
-    public void setProdutos(List<ProdutoQuantidadeEntity> produtos) {
-        this.produtos = produtos;
+    public void setProdutosQuantidades(List<ProdutoQuantidadeEntity> produtosQuantidades) {
+        this.produtosQuantidades = produtosQuantidades;
     }
 
     // Conversão para o objeto de domínio (Pedido)
     public Pedido toDomain() {
         return new Pedido(id, OrderStatus.valueOf(status),
                 idCliente,
-                produtos.stream()
+                produtosQuantidades.stream()
                         .map(ProdutoQuantidadeEntity::toDomain)
                         .toList());
     }
