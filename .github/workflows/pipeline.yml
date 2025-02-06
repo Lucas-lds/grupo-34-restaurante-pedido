@@ -22,8 +22,7 @@ jobs:
 
       - name: Build application
         run: |
-          chmod +x grupo-34-restaurante-pedido/mvnw # Concede permissão de execução ao Maven Wrapper
-          cd grupo-34-restaurante-pedido
+          chmod +x mvnw # Concede permissão de execução ao Maven Wrapper
           ./mvnw clean package -DskipTests=true
 
       - name: Upload application artifact
