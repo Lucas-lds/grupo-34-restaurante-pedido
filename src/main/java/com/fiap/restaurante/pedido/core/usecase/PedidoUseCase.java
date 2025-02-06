@@ -37,7 +37,7 @@ public class PedidoUseCase implements PedidoUseCasePortOut {
     @Override
     public List<PedidoResponse> listarPedidos() {
         return pedidoServicePortOut.listarPedidos().stream()
-                .map(pedido -> PedidoResponse.fromDomain(pedido)).toList();
+                .map(PedidoResponse::fromDomain).toList();
     }
 
 }
