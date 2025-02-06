@@ -36,8 +36,6 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
         run: |
-          cd grupo-34-restaurante-pedido
-          chmod +x mvnw
           ./mvnw sonar:sonar \
           -Dsonar.projectKey=lucas-lds_grupo-34-restaurante-pedido \
           -Dsonar.projectName=Grupo-34-restaurante-pedido \
