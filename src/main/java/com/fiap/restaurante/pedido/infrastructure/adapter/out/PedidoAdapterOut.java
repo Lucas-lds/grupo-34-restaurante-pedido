@@ -51,7 +51,7 @@ public class PedidoAdapterOut implements PedidoAdapterPortOut {
 
         pedidoEntity.setProdutosQuantidades(pedido.getListaProdutoQuantidade().stream().map(ProdutoQuantidade::toEntity).toList());
 
-//        pagamentoPortOut.enviarPagamento(pedidoEntity);
+        pagamentoPortOut.enviarPagamento(pedidoEntity);
         this.pedidoRepository.save(pedidoEntity);
     }
 
