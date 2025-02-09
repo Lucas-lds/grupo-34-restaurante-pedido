@@ -1,6 +1,6 @@
 ### DEPLOYMENT PARA O SERVIÇO DE PEDIDO ###
 resource "kubernetes_deployment" "pedido-api" {
-  depends_on = [aws_eks_cluster.eks-cluster, aws_eks_node_group.eks-cluster]
+  #depends_on = [aws_eks_cluster.eks-cluster, aws_eks_node_group.eks-cluster]
 
   metadata {
     name = "pedido"
@@ -30,7 +30,7 @@ resource "kubernetes_deployment" "pedido-api" {
 
         container {
           name  = "pedido"
-          image = "717279688908.dkr.ecr.us-east-1.amazonaws.com/repositorio-pedido:v1"
+          image = "717279688908.dkr.ecr.us-east-1.amazonaws.com/repositorio-pedido:v10"
 
           env {
             name  = "DYNAMODB_ENDPOINT"
@@ -55,7 +55,7 @@ resource "kubernetes_deployment" "pedido-api" {
           port {
             container_port = 8080
           }
-        
+
           liveness_probe {
             http_get {
               path = "/api/v1/actuator/health"
