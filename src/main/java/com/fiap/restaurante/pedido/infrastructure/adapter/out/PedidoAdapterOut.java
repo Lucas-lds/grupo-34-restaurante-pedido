@@ -11,7 +11,6 @@ import com.fiap.restaurante.pedido.core.domain.enums.OrderStatus;
 import com.fiap.restaurante.pedido.infrastructure.adapter.out.entity.PedidoEntity;
 import com.fiap.restaurante.pedido.infrastructure.adapter.out.repository.PedidoRepository;
 import org.modelmapper.ModelMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
@@ -21,14 +20,17 @@ import java.util.UUID;
 @Component
 public class PedidoAdapterOut implements PedidoAdapterPortOut {
 
-    @Autowired
-    private PedidoRepository pedidoRepository;
-    @Autowired
-    private ModelMapper mapper;
-    @Autowired
-    private PagamentoPortOut pagamentoPortOut;
-    @Autowired
-    private ProdutoPortOut produtoPortOut;
+    private final PedidoRepository pedidoRepository;
+    private final ModelMapper mapper;
+    private final PagamentoPortOut pagamentoPortOut;
+    private final ProdutoPortOut produtoPortOut;
+
+    public PedidoAdapterOut(PedidoRepository pedidoRepository, ModelMapper mapper, PagamentoPortOut pagamentoPortOut, ProdutoPortOut produtoPortOut) {
+        this.pedidoRepository = pedidoRepository;
+        this.mapper = mapper;
+        this.pagamentoPortOut = pagamentoPortOut;
+        this.produtoPortOut = produtoPortOut;
+    }
 
 
     @Override
