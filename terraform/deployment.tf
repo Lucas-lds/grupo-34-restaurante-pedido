@@ -30,7 +30,7 @@ resource "kubernetes_deployment" "pedido-api" {
 
         container {
           name  = "pedido"
-          image = "717279688908.dkr.ecr.us-east-1.amazonaws.com/repositorio-pedido:v10"
+          image = "717279688908.dkr.ecr.us-east-1.amazonaws.com/repositorio:v11"
 
           env {
             name  = "DYNAMODB_ENDPOINT"

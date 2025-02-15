@@ -1,7 +1,16 @@
 import boto3
 
-# Configurar o recurso DynamoDB
 dynamodb = boto3.resource('dynamodb', region_name='us-east-1')
+
+# Verificar se as tabelas foram criadas corretamente
+try:
+    existing_tables = dynamodb.tables.all()
+    table_names = [table.name for table in existing_tables]
+    print("Tabelas existentes no DynamoDB:")
+    for name in table_names:
+        print(name)
+except Exception as e:
+    print(f"Erro ao listar as tabelas: {e}")
 
 # Criar tabela de pedidos
 try:
@@ -28,7 +37,8 @@ except Exception as e:
 
 # Inserir dados iniciais na tabela de pedidos
 try:
-    pedidos_table.put_item(
+    pedidos_table = dynamodb.Table('Pedidos')
+    response = pedidos_table.put_item(
         Item={
             'PedidoID': '12345',
             'ClienteID': '67890',
@@ -37,6 +47,7 @@ try:
         }
     )
     print("Dados iniciais inseridos na tabela 'Pedidos'.")
+    print(f"Resposta do DynamoDB: {response}")
 except Exception as e:
     print(f"Erro ao inserir dados na tabela 'Pedidos': {e}")
 
@@ -65,7 +76,7 @@ except Exception as e:
 
 # Inserir dados iniciais na tabela de pedido_produtos
 try:
-    pedido_produtos_table.put_item(
+    response = pedido_produtos_table.put_item(
         Item={
             'PedidoProdutoID': '12345',
             'PedidoID': '67890',
@@ -74,6 +85,7 @@ try:
         }
     )
     print("Dados iniciais inseridos na tabela 'PedidoProdutos'.")
+    print(f"Resposta do DynamoDB: {response}")
 except Exception as e:
     print(f"Erro ao inserir dados na tabela 'PedidoProdutos': {e}")
 

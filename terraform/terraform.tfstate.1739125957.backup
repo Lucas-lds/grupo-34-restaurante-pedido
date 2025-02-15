@@ -1,0 +1,1241 @@
+{
+  "version": 4,
+  "terraform_version": "1.10.5",
+  "serial": 59,
+  "lineage": "1e4bf742-f1c8-f63b-65aa-e634b94ab56f",
+  "outputs": {
+    "pem": {
+      "value": "-----BEGIN RSA PRIVATE KEY-----\nMIIEpAIBAAKCAQEAvY9OmJ0Uj96yclWZP8eEJ3YJO5e8Q4YaJOrAGeRZnGZ0C3Jo\n4zHyCu9NlHh34hHxuPU1k6x4E8XGpVlFuVX6yiU4EEJeUhVkK8tY7s8yzEZOu/uW\nJEDxSk1eG2eKxVWLwyyyzMj4E1fBk6n3s+RjQ/nCPXXSs61VU+s353P4G09Thauj\njO4u3zqpdzpc6A8/WjneO15jrMrsy7tvBbpz/eZ2h3yXPfaTMBxSCkxnVegtl+Q/\nk9GrRDtD0BYahbXNL/IgpAHJBj24Mikot0yPg+1Xf136MgL6xh3EnjfFlGzXvR1r\nc8exgyPfNXKNPwNsdHXUNZn5IFE7UHQ8fNUCfwIDAQABAoIBAQCfBZDW4Lf2NcmX\ntw2X/sVz4Ua/knxiXSajn7fGQNWYKi7hx3oMVsMJv1Vi32ka4xjYpATtPLuDQuBx\nqCGg6Gs6l9yfbz33OHDPeIjD1lh0G+tDMjzzbvO89IilDsjQ4QIdmurodxP+Dhmb\nyfO+GzPXO7hinOxExX2Wp/Y/Gf+i0AXxxFXuijDFUnhczMNGrTVz2Py+mUGEQpPZ\nr0gj68DAIZEDHithOoMMxt67U8fn3I2ZcykOWr8SshchSRdft18H41wMou+5VFLK\notLb6q55wYTbQSY3f+oDifuGmevtPWzhGTuBIJ+/6bPpLRoClix3Wr7AxR6Pot/8\nXbldw5W5AoGBAMJz+MlI75ziqNX35ZavtJAv0vEzde/aQNvpzmlvPV8jzhH8jBrp\nd4SSunkk9bmVaAF6w6DtBmx/oaPij+gaNVk4IC2yHpqZ0EQWdn6poe7FJNSfVuwl\nLdg+X/uQ9CZr6EARZ/rBUEcRBFlZ7pzzD6vtVjYHTLyrtJSWlI1P/fBjAoGBAPmO\n2ZlptJWhTym9lLlQvxe0WSZVYnPEz+HhYDTDx/msa4C3B36xkUHiW1EUTMTbuVvw\nWUL08lLfNdE2mEigd/hpSvspzibWT+dptQNuxrocYUl5FxbNDeXRqRZzfw103bRi\nQ5hPu7JbBWDh1q9wscDKcGGeSqG47W5ReJXQhio1AoGBAKMMrXrSXqD1ac7oq6nb\nsRMKFt3LYcP6BVKhTUQZU6O4GS35zt0uENqoUhYMyMKRpgE/mFQTC8TkjHwoGLTt\nbPhf2JOYfJL0EK9XCosQ4EifJE/pP/CJCFT/kGoX1LF23+sA7WhUumSsvzHQ+ATA\nxs5KF3T8T/sQGz5QuUV44pyzAoGAKIEsBj9m5QZaf+7aTb2yVlmaQqOHKD0gdIwM\n/mNseLSoeiq617BgYC4qHh3KXAVBr49yHXD+R78c0AkpbFhHQJVuaxec8ybDr06z\n54u6S4jBrZguzC+Z+twtsowqafe26EkuqXD/iPJHDDN7kdwbravt05pKiLcoKkik\n5sQCkqUCgYAPfwsMe6VFXf/pGDC21pajMvqX0RYNsc09ljhQr2COM+q0Jn7DhVnT\nBFKjsQoH61cZvOKsoQjnHlsajG5B/d8CirYh4LE04/1iFDQEqUTy8W6SDLKdO0CA\n5yPcTpY5AOelLkwRHztUgsDYva5Hxw28CzkVfa9LkLgp3JZVoAR6Wg==\n-----END RSA PRIVATE KEY-----\n",
+      "type": "string",
+      "sensitive": true
+    }
+  },
+  "resources": [
+    {
+      "mode": "data",
+      "type": "aws_eks_cluster",
+      "name": "default",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "access_config": [
+              {
+                "authentication_mode": "CONFIG_MAP",
+                "bootstrap_cluster_creator_admin_permissions": true
+              }
+            ],
+            "arn": "arn:aws:eks:us-east-1:717279688908:cluster/restaurante-cluster2",
+            "certificate_authority": [
+              {
+                "data": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURCVENDQWUyZ0F3SUJBZ0lJTnFDLytuRGJJeWd3RFFZSktvWklodmNOQVFFTEJRQXdGVEVUTUJFR0ExVUUKQXhNS2EzVmlaWEp1WlhSbGN6QWVGdzB5TlRBeU1Ea3hORE0zTURGYUZ3MHpOVEF5TURjeE5EUXlNREZhTUJVeApFekFSQmdOVkJBTVRDbXQxWW1WeWJtVjBaWE13Z2dFaU1BMEdDU3FHU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLCkFvSUJBUURNenR1VUMyUDB5SUo1MVpDMEU1bm5xdTVvRDlaQVRnRElmWm1PR3BXV09hbjI1cmpISHkzV3ZDNHYKSGdjWE96c3JLcWYvSC9uYkpBSDErMFNEN0xaUEpZbjJ5Slk3V25ybmpwSlhhQyt6L2tSeFJFeHRrWkhGaTRQMQorNllJNlRCRXlMUjFPNlpyMlZyZ2ZnRjN4L3k0WFFLQ25lbWN2T3N3dUFzMHpvYlVXN00vTkJja3FPSHdGK1MzCkdKUHBocStHaThQT2haUFBTaEVsaHVWSHU2a01kYlR2UHFkZ2JjZXcvcXJqWGl4RUV1SlhHQ0VoQVdBVEQxT0YKbDkra3JzaFhyNzFScXlRR2dDWnB3MnBiN3BTTTI3MTM2N3RXNktCQlBkRHBkdmtpTUxCSUJHY1E5L0NVcHl2aAo1ekJ0amRTTGFOaml2MHBIUTVTeFlWR0hFN3U5QWdNQkFBR2pXVEJYTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQCkJnTlZIUk1CQWY4RUJUQURBUUgvTUIwR0ExVWREZ1FXQkJRQzYxdnhvajcvM2ZxZTROZ3JUMHhkeDlrZ0d6QVYKQmdOVkhSRUVEakFNZ2dwcmRXSmxjbTVsZEdWek1BMEdDU3FHU0liM0RRRUJDd1VBQTRJQkFRQVlwcEVrZFJDbgpqdWgxQmlJNzVmdUc2anpsUXJ2dEFhaUJzTlZYamwyd2p0UFZsMHkrQXhQc3hmOGw5ajZoUmw3ajVISVpEN2g1CmpyaWwydzNsWm14YmZEc0NpRlNha0tpTGtHZk9FM2pVcU41NEZVbXkwZGp6NkFpRTFNVTMwYXhISEhFaDdsMDEKeGNNWVIrNENuTlVaRUJiMTJrcVN3Z0NvdlhtRitEM3c2b21FdkdKaEtTV1BNTDJuVWdUT1RqbkRTY1k3T0h5RApjTkFkSHkyTzU0TlIrSXEzMXdUek9SVmRvQ3V1UTZTM1lTL05IMEJkZXdTMkNQQnF5UWdvWjFMZVM4UkhJUGJ5Ci9ITFhPRXd4c1lZa2hnT0d5UHl3dFNWNG5nOFJOTmZQcXBoVEFEUzdqRHR0cnpSZHJIdXJ4eEk4REFWZjJrTFUKMWVlUnZjK2hwR0d0Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K"
+              }
+            ],
+            "cluster_id": null,
+            "compute_config": [],
+            "created_at": "2025-02-09T14:36:42Z",
+            "enabled_cluster_log_types": [
+              "api",
+              "audit",
+              "authenticator",
+              "controllerManager",
+              "scheduler"
+            ],
+            "endpoint": "https://EA88FF59BFD9AD35E500CAB794F57F4B.gr7.us-east-1.eks.amazonaws.com",
+            "id": "restaurante-cluster2",
+            "identity": [
+              {
+                "oidc": [
+                  {
+                    "issuer": "https://oidc.eks.us-east-1.amazonaws.com/id/EA88FF59BFD9AD35E500CAB794F57F4B"
+                  }
+                ]
+              }
+            ],
+            "kubernetes_network_config": [
+              {
+                "elastic_load_balancing": [
+                  {
+                    "enabled": false
+                  }
+                ],
+                "ip_family": "ipv4",
+                "service_ipv4_cidr": "10.100.0.0/16",
+                "service_ipv6_cidr": ""
+              }
+            ],
+            "name": "restaurante-cluster2",
+            "outpost_config": [],
+            "platform_version": "eks.18",
+            "remote_network_config": [],
+            "role_arn": "arn:aws:iam::717279688908:role/eks-node-role",
+            "status": "ACTIVE",
+            "storage_config": [],
+            "tags": {},
+            "upgrade_policy": [
+              {
+                "support_type": "EXTENDED"
+              }
+            ],
+            "version": "1.31",
+            "vpc_config": [
+              {
+                "cluster_security_group_id": "sg-0695bd7c8b5bf5db9",
+                "endpoint_private_access": true,
+                "endpoint_public_access": true,
+                "public_access_cidrs": [
+                  "0.0.0.0/0"
+                ],
+                "security_group_ids": [
+                  "sg-0830d0835664b37f3"
+                ],
+                "subnet_ids": [
+                  "subnet-02e5a2960cbaf6259",
+                  "subnet-0ba1d16a81898b46b"
+                ],
+                "vpc_id": "vpc-0bb3319f6293b884b"
+              }
+            ],
+            "zonal_shift_config": []
+          },
+          "sensitive_attributes": []
+        }
+      ]
+    },
+    {
+      "mode": "data",
+      "type": "aws_eks_cluster_auth",
+      "name": "default",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "restaurante-cluster2",
+            "name": "restaurante-cluster2",
+            "token": "k8s-aws-v1.aHR0cHM6Ly9zdHMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vP0FjdGlvbj1HZXRDYWxsZXJJZGVudGl0eSZWZXJzaW9uPTIwMTEtMDYtMTUmWC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBMk9BSlRQREdLTUxDUjMyVCUyRjIwMjUwMjA5JTJGdXMtZWFzdC0xJTJGc3RzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNTAyMDlUMTc1OTA4WiZYLUFtei1FeHBpcmVzPTAmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JTNCeC1rOHMtYXdzLWlkJlgtQW16LVNpZ25hdHVyZT1jYmM2NDVhNjMwYjQ0YmUwMDEyNzc0ODM5Y2M0MjUwMjRlNzA0OGZlYmE1YTU5ODhkMmYwYzVjZWUxYTczOGRi"
+          },
+          "sensitive_attributes": [
+            [
+              {
+                "type": "get_attr",
+                "value": "token"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_dynamodb_table",
+      "name": "pedido_table",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "arn": "arn:aws:dynamodb:us-east-1:717279688908:table/Pedidos",
+            "attribute": [
+              {
+                "name": "PedidoID",
+                "type": "S"
+              }
+            ],
+            "billing_mode": "PAY_PER_REQUEST",
+            "deletion_protection_enabled": false,
+            "global_secondary_index": [],
+            "hash_key": "PedidoID",
+            "id": "Pedidos",
+            "import_table": [],
+            "local_secondary_index": [],
+            "name": "Pedidos",
+            "on_demand_throughput": [],
+            "point_in_time_recovery": [
+              {
+                "enabled": false
+              }
+            ],
+            "range_key": null,
+            "read_capacity": 0,
+            "replica": [],
+            "restore_date_time": null,
+            "restore_source_name": null,
+            "restore_source_table_arn": null,
+            "restore_to_latest_time": null,
+            "server_side_encryption": [],
+            "stream_arn": "",
+            "stream_enabled": false,
+            "stream_label": "",
+            "stream_view_type": "",
+            "table_class": "STANDARD",
+            "tags": {
+              "Name": "Pedidos Table"
+            },
+            "tags_all": {
+              "Name": "Pedidos Table"
+            },
+            "timeouts": null,
+            "ttl": [
+              {
+                "attribute_name": "",
+                "enabled": false
+              }
+            ],
+            "write_capacity": 0
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxODAwMDAwMDAwMDAwLCJkZWxldGUiOjYwMDAwMDAwMDAwMCwidXBkYXRlIjozNjAwMDAwMDAwMDAwfSwic2NoZW1hX3ZlcnNpb24iOiIxIn0="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_iam_policy",
+      "name": "db_pedido_dynamodb_access_policy",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:iam::717279688908:policy/DynamoDBPolicy",
+            "attachment_count": 1,
+            "description": "Permite acesso ao DynamoDB",
+            "id": "arn:aws:iam::717279688908:policy/DynamoDBPolicy",
+            "name": "DynamoDBPolicy",
+            "name_prefix": "",
+            "path": "/",
+            "policy": "{\"Statement\":[{\"Action\":[\"dynamodb:PutItem\",\"dynamodb:GetItem\",\"dynamodb:UpdateItem\",\"dynamodb:DeleteItem\",\"dynamodb:Query\",\"dynamodb:Scan\"],\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"2012-10-17\"}",
+            "policy_id": "ANPA2OAJTPDGCEUH64YQQ",
+            "tags": {},
+            "tags_all": {}
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_iam_role",
+      "name": "db_pedido_dynamodb_access_role",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:iam::717279688908:role/dynamodb-role",
+            "assume_role_policy": "{\"Statement\":[{\"Action\":\"sts:AssumeRole\",\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"eks.amazonaws.com\"}}],\"Version\":\"2012-10-17\"}",
+            "create_date": "2025-02-09T16:20:51Z",
+            "description": "",
+            "force_detach_policies": false,
+            "id": "dynamodb-role",
+            "inline_policy": [],
+            "managed_policy_arns": [
+              "arn:aws:iam::717279688908:policy/DynamoDBPolicy"
+            ],
+            "max_session_duration": 3600,
+            "name": "dynamodb-role",
+            "name_prefix": "",
+            "path": "/",
+            "permissions_boundary": "",
+            "tags": {},
+            "tags_all": {},
+            "unique_id": "AROA2OAJTPDGHF74QRH6Z"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_iam_role_policy_attachment",
+      "name": "db_pedido_dynamodb_access_policy_attachment",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "dynamodb-role-20250209162052089200000003",
+            "policy_arn": "arn:aws:iam::717279688908:policy/DynamoDBPolicy",
+            "role": "dynamodb-role"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "aws_iam_policy.db_pedido_dynamodb_access_policy",
+            "aws_iam_role.db_pedido_dynamodb_access_role"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_key_pair",
+      "name": "generated_key",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "arn": "arn:aws:ec2:us-east-1:717279688908:key-pair/chave-fiap-ms-pedido",
+            "fingerprint": "04:7b:c7:ee:f7:54:5d:41:2e:ac:b9:1a:ac:8d:94:12",
+            "id": "chave-fiap-ms-pedido",
+            "key_name": "chave-fiap-ms-pedido",
+            "key_name_prefix": "",
+            "key_pair_id": "key-024e8c6a6ac1e8fbd",
+            "key_type": "rsa",
+            "public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC9j06YnRSP3rJyVZk/x4Qndgk7l7xDhhok6sAZ5FmcZnQLcmjjMfIK702UeHfiEfG49TWTrHgTxcalWUW5VfrKJTgQQl5SFWQry1juzzLMRk67+5YkQPFKTV4bZ4rFVYvDLLLMyPgTV8GTqfez5GND+cI9ddKzrVVT6zfnc/gbT1OFq6OM7i7fOql3OlzoDz9aOd47XmOsyuzLu28FunP95naHfJc99pMwHFIKTGdV6C2X5D+T0atEO0PQFhqFtc0v8iCkAckGPbgyKSi3TI+D7Vd/XfoyAvrGHcSeN8WUbNe9HWtzx7GDI981co0/A2x0ddQ1mfkgUTtQdDx81QJ/",
+            "tags": {},
+            "tags_all": {}
+          },
+          "sensitive_attributes": [],
+          "private": "eyJzY2hlbWFfdmVyc2lvbiI6IjEifQ==",
+          "dependencies": [
+            "tls_private_key.tls_private"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_secretsmanager_secret",
+      "name": "pedido",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:secretsmanager:us-east-1:717279688908:secret:keypair-ms-pedido-v1-Zpw02k",
+            "description": "",
+            "force_overwrite_replica_secret": false,
+            "id": "arn:aws:secretsmanager:us-east-1:717279688908:secret:keypair-ms-pedido-v1-Zpw02k",
+            "kms_key_id": "",
+            "name": "keypair-ms-pedido-v1",
+            "name_prefix": "",
+            "policy": "",
+            "recovery_window_in_days": 30,
+            "replica": [],
+            "tags": {},
+            "tags_all": {}
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_secretsmanager_secret_version",
+      "name": "pedido",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:secretsmanager:us-east-1:717279688908:secret:keypair-ms-pedido-v1-Zpw02k",
+            "id": "arn:aws:secretsmanager:us-east-1:717279688908:secret:keypair-ms-pedido-v1-Zpw02k|terraform-20250209162051707300000002",
+            "secret_binary": "",
+            "secret_id": "arn:aws:secretsmanager:us-east-1:717279688908:secret:keypair-ms-pedido-v1-Zpw02k",
+            "secret_string": "{\"KeyName\":\"chave-fiap-ms-pedido\",\"PEM\":\"-----BEGIN RSA PRIVATE KEY-----\\nMIIEpAIBAAKCAQEAvY9OmJ0Uj96yclWZP8eEJ3YJO5e8Q4YaJOrAGeRZnGZ0C3Jo\\n4zHyCu9NlHh34hHxuPU1k6x4E8XGpVlFuVX6yiU4EEJeUhVkK8tY7s8yzEZOu/uW\\nJEDxSk1eG2eKxVWLwyyyzMj4E1fBk6n3s+RjQ/nCPXXSs61VU+s353P4G09Thauj\\njO4u3zqpdzpc6A8/WjneO15jrMrsy7tvBbpz/eZ2h3yXPfaTMBxSCkxnVegtl+Q/\\nk9GrRDtD0BYahbXNL/IgpAHJBj24Mikot0yPg+1Xf136MgL6xh3EnjfFlGzXvR1r\\nc8exgyPfNXKNPwNsdHXUNZn5IFE7UHQ8fNUCfwIDAQABAoIBAQCfBZDW4Lf2NcmX\\ntw2X/sVz4Ua/knxiXSajn7fGQNWYKi7hx3oMVsMJv1Vi32ka4xjYpATtPLuDQuBx\\nqCGg6Gs6l9yfbz33OHDPeIjD1lh0G+tDMjzzbvO89IilDsjQ4QIdmurodxP+Dhmb\\nyfO+GzPXO7hinOxExX2Wp/Y/Gf+i0AXxxFXuijDFUnhczMNGrTVz2Py+mUGEQpPZ\\nr0gj68DAIZEDHithOoMMxt67U8fn3I2ZcykOWr8SshchSRdft18H41wMou+5VFLK\\notLb6q55wYTbQSY3f+oDifuGmevtPWzhGTuBIJ+/6bPpLRoClix3Wr7AxR6Pot/8\\nXbldw5W5AoGBAMJz+MlI75ziqNX35ZavtJAv0vEzde/aQNvpzmlvPV8jzhH8jBrp\\nd4SSunkk9bmVaAF6w6DtBmx/oaPij+gaNVk4IC2yHpqZ0EQWdn6poe7FJNSfVuwl\\nLdg+X/uQ9CZr6EARZ/rBUEcRBFlZ7pzzD6vtVjYHTLyrtJSWlI1P/fBjAoGBAPmO\\n2ZlptJWhTym9lLlQvxe0WSZVYnPEz+HhYDTDx/msa4C3B36xkUHiW1EUTMTbuVvw\\nWUL08lLfNdE2mEigd/hpSvspzibWT+dptQNuxrocYUl5FxbNDeXRqRZzfw103bRi\\nQ5hPu7JbBWDh1q9wscDKcGGeSqG47W5ReJXQhio1AoGBAKMMrXrSXqD1ac7oq6nb\\nsRMKFt3LYcP6BVKhTUQZU6O4GS35zt0uENqoUhYMyMKRpgE/mFQTC8TkjHwoGLTt\\nbPhf2JOYfJL0EK9XCosQ4EifJE/pP/CJCFT/kGoX1LF23+sA7WhUumSsvzHQ+ATA\\nxs5KF3T8T/sQGz5QuUV44pyzAoGAKIEsBj9m5QZaf+7aTb2yVlmaQqOHKD0gdIwM\\n/mNseLSoeiq617BgYC4qHh3KXAVBr49yHXD+R78c0AkpbFhHQJVuaxec8ybDr06z\\n54u6S4jBrZguzC+Z+twtsowqafe26EkuqXD/iPJHDDN7kdwbravt05pKiLcoKkik\\n5sQCkqUCgYAPfwsMe6VFXf/pGDC21pajMvqX0RYNsc09ljhQr2COM+q0Jn7DhVnT\\nBFKjsQoH61cZvOKsoQjnHlsajG5B/d8CirYh4LE04/1iFDQEqUTy8W6SDLKdO0CA\\n5yPcTpY5AOelLkwRHztUgsDYva5Hxw28CzkVfa9LkLgp3JZVoAR6Wg==\\n-----END RSA PRIVATE KEY-----\\n\",\"RSAPUB\":\"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC9j06YnRSP3rJyVZk/x4Qndgk7l7xDhhok6sAZ5FmcZnQLcmjjMfIK702UeHfiEfG49TWTrHgTxcalWUW5VfrKJTgQQl5SFWQry1juzzLMRk67+5YkQPFKTV4bZ4rFVYvDLLLMyPgTV8GTqfez5GND+cI9ddKzrVVT6zfnc/gbT1OFq6OM7i7fOql3OlzoDz9aOd47XmOsyuzLu28FunP95naHfJc99pMwHFIKTGdV6C2X5D+T0atEO0PQFhqFtc0v8iCkAckGPbgyKSi3TI+D7Vd/XfoyAvrGHcSeN8WUbNe9HWtzx7GDI981co0/A2x0ddQ1mfkgUTtQdDx81QJ/\\n\"}",
+            "version_id": "terraform-20250209162051707300000002",
+            "version_stages": [
+              "AWSCURRENT"
+            ]
+          },
+          "sensitive_attributes": [
+            [
+              {
+                "type": "get_attr",
+                "value": "secret_binary"
+              }
+            ],
+            [
+              {
+                "type": "get_attr",
+                "value": "secret_string"
+              }
+            ]
+          ],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "aws_key_pair.generated_key",
+            "aws_secretsmanager_secret.pedido",
+            "tls_private_key.tls_private"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_security_group",
+      "name": "rds_sg",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "arn": "arn:aws:ec2:us-east-1:717279688908:security-group/sg-0f387ee6366ebea3e",
+            "description": "Security group for RDS",
+            "egress": [
+              {
+                "cidr_blocks": [
+                  "0.0.0.0/0"
+                ],
+                "description": "",
+                "from_port": 0,
+                "ipv6_cidr_blocks": [],
+                "prefix_list_ids": [],
+                "protocol": "-1",
+                "security_groups": [],
+                "self": false,
+                "to_port": 0
+              }
+            ],
+            "id": "sg-0f387ee6366ebea3e",
+            "ingress": [
+              {
+                "cidr_blocks": [
+                  "172.31.0.0/16"
+                ],
+                "description": "",
+                "from_port": 3306,
+                "ipv6_cidr_blocks": [],
+                "prefix_list_ids": [],
+                "protocol": "tcp",
+                "security_groups": [],
+                "self": false,
+                "to_port": 3306
+              }
+            ],
+            "name": "rds-security-group-ms-pedido",
+            "name_prefix": "",
+            "owner_id": "717279688908",
+            "revoke_rules_on_delete": false,
+            "tags": {},
+            "tags_all": {},
+            "timeouts": null,
+            "vpc_id": "vpc-0bb3319f6293b884b"
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6OTAwMDAwMDAwMDAwfSwic2NoZW1hX3ZlcnNpb24iOiIxIn0="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_security_group",
+      "name": "ssh_cluster_ms_pedido",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "arn": "arn:aws:ec2:us-east-1:717279688908:security-group/sg-08a8edbbd384bb849",
+            "description": "Managed by Terraform",
+            "egress": [
+              {
+                "cidr_blocks": [
+                  "0.0.0.0/0"
+                ],
+                "description": "",
+                "from_port": 0,
+                "ipv6_cidr_blocks": [],
+                "prefix_list_ids": [],
+                "protocol": "-1",
+                "security_groups": [],
+                "self": false,
+                "to_port": 0
+              }
+            ],
+            "id": "sg-08a8edbbd384bb849",
+            "ingress": [
+              {
+                "cidr_blocks": [
+                  "0.0.0.0/0"
+                ],
+                "description": "",
+                "from_port": 22,
+                "ipv6_cidr_blocks": [],
+                "prefix_list_ids": [],
+                "protocol": "tcp",
+                "security_groups": [],
+                "self": false,
+                "to_port": 22
+              },
+              {
+                "cidr_blocks": [
+                  "0.0.0.0/0"
+                ],
+                "description": "",
+                "from_port": 3306,
+                "ipv6_cidr_blocks": [],
+                "prefix_list_ids": [],
+                "protocol": "tcp",
+                "security_groups": [],
+                "self": false,
+                "to_port": 3306
+              },
+              {
+                "cidr_blocks": [
+                  "0.0.0.0/0"
+                ],
+                "description": "",
+                "from_port": 443,
+                "ipv6_cidr_blocks": [],
+                "prefix_list_ids": [],
+                "protocol": "tcp",
+                "security_groups": [],
+                "self": false,
+                "to_port": 443
+              },
+              {
+                "cidr_blocks": [
+                  "0.0.0.0/0"
+                ],
+                "description": "",
+                "from_port": 8080,
+                "ipv6_cidr_blocks": [],
+                "prefix_list_ids": [],
+                "protocol": "tcp",
+                "security_groups": [],
+                "self": false,
+                "to_port": 8080
+              },
+              {
+                "cidr_blocks": [
+                  "0.0.0.0/0"
+                ],
+                "description": "",
+                "from_port": 80,
+                "ipv6_cidr_blocks": [],
+                "prefix_list_ids": [],
+                "protocol": "tcp",
+                "security_groups": [],
+                "self": false,
+                "to_port": 80
+              }
+            ],
+            "name": "ssh_cluster_ms_pedido",
+            "name_prefix": "",
+            "owner_id": "717279688908",
+            "revoke_rules_on_delete": false,
+            "tags": {},
+            "tags_all": {},
+            "timeouts": null,
+            "vpc_id": "vpc-0bb3319f6293b884b"
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6OTAwMDAwMDAwMDAwfSwic2NoZW1hX3ZlcnNpb24iOiIxIn0="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_security_group_rule",
+      "name": "rds_in",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 2,
+          "attributes": {
+            "cidr_blocks": [
+              "172.31.0.0/16"
+            ],
+            "description": null,
+            "from_port": 3306,
+            "id": "sgrule-2821070354",
+            "ipv6_cidr_blocks": null,
+            "prefix_list_ids": null,
+            "protocol": "tcp",
+            "security_group_id": "sg-0f387ee6366ebea3e",
+            "security_group_rule_id": "sgr-01cc245185cd3374c",
+            "self": false,
+            "source_security_group_id": null,
+            "timeouts": null,
+            "to_port": 3306,
+            "type": "ingress"
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDB9LCJzY2hlbWFfdmVyc2lvbiI6IjIifQ==",
+          "dependencies": [
+            "aws_security_group.rds_sg"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_security_group_rule",
+      "name": "rds_out",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 2,
+          "attributes": {
+            "cidr_blocks": [
+              "0.0.0.0/0"
+            ],
+            "description": null,
+            "from_port": 0,
+            "id": "sgrule-4027390034",
+            "ipv6_cidr_blocks": null,
+            "prefix_list_ids": null,
+            "protocol": "-1",
+            "security_group_id": "sg-0f387ee6366ebea3e",
+            "security_group_rule_id": "sgr-0f526411f654085e0",
+            "self": false,
+            "source_security_group_id": null,
+            "timeouts": null,
+            "to_port": 0,
+            "type": "egress"
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDB9LCJzY2hlbWFfdmVyc2lvbiI6IjIifQ==",
+          "dependencies": [
+            "aws_security_group.rds_sg"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_security_group_rule",
+      "name": "ssh_cluster_ms_pedido_http",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 2,
+          "attributes": {
+            "cidr_blocks": [
+              "0.0.0.0/0"
+            ],
+            "description": null,
+            "from_port": 8080,
+            "id": "sgrule-2550308076",
+            "ipv6_cidr_blocks": null,
+            "prefix_list_ids": null,
+            "protocol": "tcp",
+            "security_group_id": "sg-08a8edbbd384bb849",
+            "security_group_rule_id": "sgr-0f0baab59d95372e0",
+            "self": false,
+            "source_security_group_id": null,
+            "timeouts": null,
+            "to_port": 8080,
+            "type": "ingress"
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDB9LCJzY2hlbWFfdmVyc2lvbiI6IjIifQ==",
+          "dependencies": [
+            "aws_security_group.ssh_cluster_ms_pedido"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_security_group_rule",
+      "name": "ssh_cluster_ms_pedido_http_80",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 2,
+          "attributes": {
+            "cidr_blocks": [
+              "0.0.0.0/0"
+            ],
+            "description": null,
+            "from_port": 80,
+            "id": "sgrule-1879483891",
+            "ipv6_cidr_blocks": null,
+            "prefix_list_ids": null,
+            "protocol": "tcp",
+            "security_group_id": "sg-08a8edbbd384bb849",
+            "security_group_rule_id": "sgr-08ccdb4fb61a13322",
+            "self": false,
+            "source_security_group_id": null,
+            "timeouts": null,
+            "to_port": 80,
+            "type": "ingress"
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDB9LCJzY2hlbWFfdmVyc2lvbiI6IjIifQ==",
+          "dependencies": [
+            "aws_security_group.ssh_cluster_ms_pedido"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_security_group_rule",
+      "name": "ssh_cluster_ms_pedido_https",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 2,
+          "attributes": {
+            "cidr_blocks": [
+              "0.0.0.0/0"
+            ],
+            "description": null,
+            "from_port": 443,
+            "id": "sgrule-1057945581",
+            "ipv6_cidr_blocks": null,
+            "prefix_list_ids": null,
+            "protocol": "tcp",
+            "security_group_id": "sg-08a8edbbd384bb849",
+            "security_group_rule_id": "sgr-04d2e50cd5eec93d4",
+            "self": false,
+            "source_security_group_id": null,
+            "timeouts": null,
+            "to_port": 443,
+            "type": "ingress"
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDB9LCJzY2hlbWFfdmVyc2lvbiI6IjIifQ==",
+          "dependencies": [
+            "aws_security_group.ssh_cluster_ms_pedido"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_security_group_rule",
+      "name": "ssh_cluster_ms_pedido_in",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 2,
+          "attributes": {
+            "cidr_blocks": [
+              "0.0.0.0/0"
+            ],
+            "description": null,
+            "from_port": 22,
+            "id": "sgrule-3331127366",
+            "ipv6_cidr_blocks": null,
+            "prefix_list_ids": null,
+            "protocol": "tcp",
+            "security_group_id": "sg-08a8edbbd384bb849",
+            "security_group_rule_id": "sgr-038571d18c55749d3",
+            "self": false,
+            "source_security_group_id": null,
+            "timeouts": null,
+            "to_port": 22,
+            "type": "ingress"
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDB9LCJzY2hlbWFfdmVyc2lvbiI6IjIifQ==",
+          "dependencies": [
+            "aws_security_group.ssh_cluster_ms_pedido"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_security_group_rule",
+      "name": "ssh_cluster_ms_pedido_out",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 2,
+          "attributes": {
+            "cidr_blocks": [
+              "0.0.0.0/0"
+            ],
+            "description": null,
+            "from_port": 0,
+            "id": "sgrule-1662296866",
+            "ipv6_cidr_blocks": null,
+            "prefix_list_ids": null,
+            "protocol": "-1",
+            "security_group_id": "sg-08a8edbbd384bb849",
+            "security_group_rule_id": "sgr-0e4258bd5a3aa8bc4",
+            "self": false,
+            "source_security_group_id": null,
+            "timeouts": null,
+            "to_port": 0,
+            "type": "egress"
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDB9LCJzY2hlbWFfdmVyc2lvbiI6IjIifQ==",
+          "dependencies": [
+            "aws_security_group.ssh_cluster_ms_pedido"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_security_group_rule",
+      "name": "ssh_cluster_ms_pedido_rds",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 2,
+          "attributes": {
+            "cidr_blocks": [
+              "0.0.0.0/0"
+            ],
+            "description": null,
+            "from_port": 3306,
+            "id": "sgrule-390168762",
+            "ipv6_cidr_blocks": null,
+            "prefix_list_ids": null,
+            "protocol": "tcp",
+            "security_group_id": "sg-08a8edbbd384bb849",
+            "security_group_rule_id": "sgr-06f7e01f72147db7e",
+            "self": false,
+            "source_security_group_id": null,
+            "timeouts": null,
+            "to_port": 3306,
+            "type": "ingress"
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDB9LCJzY2hlbWFfdmVyc2lvbiI6IjIifQ==",
+          "dependencies": [
+            "aws_security_group.ssh_cluster_ms_pedido"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "kubernetes_deployment",
+      "name": "pedido-api",
+      "provider": "provider[\"registry.terraform.io/hashicorp/kubernetes\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "id": "default/pedido",
+            "metadata": [
+              {
+                "annotations": {},
+                "generate_name": "",
+                "generation": 1,
+                "labels": {
+                  "app": "pedido"
+                },
+                "name": "pedido",
+                "namespace": "default",
+                "resource_version": "17765",
+                "uid": "770834f3-b411-4b1d-b763-43cc337d9fa5"
+              }
+            ],
+            "spec": [
+              {
+                "min_ready_seconds": 0,
+                "paused": false,
+                "progress_deadline_seconds": 600,
+                "replicas": "1",
+                "revision_history_limit": 10,
+                "selector": [
+                  {
+                    "match_expressions": [],
+                    "match_labels": {
+                      "app": "pedido"
+                    }
+                  }
+                ],
+                "strategy": [
+                  {
+                    "rolling_update": [
+                      {
+                        "max_surge": "25%",
+                        "max_unavailable": "25%"
+                      }
+                    ],
+                    "type": "RollingUpdate"
+                  }
+                ],
+                "template": [
+                  {
+                    "metadata": [
+                      {
+                        "annotations": {},
+                        "generate_name": "",
+                        "generation": 0,
+                        "labels": {
+                          "app": "pedido"
+                        },
+                        "name": "",
+                        "namespace": "",
+                        "resource_version": "",
+                        "uid": ""
+                      }
+                    ],
+                    "spec": [
+                      {
+                        "active_deadline_seconds": 0,
+                        "affinity": [],
+                        "automount_service_account_token": true,
+                        "container": [
+                          {
+                            "args": [],
+                            "command": [],
+                            "env": [
+                              {
+                                "name": "DYNAMODB_ENDPOINT",
+                                "value": "https://dynamodb.us-east-1.amazonaws.com",
+                                "value_from": []
+                              },
+                              {
+                                "name": "DYNAMODB_TABLE_NAME",
+                                "value": "Pedidos",
+                                "value_from": []
+                              }
+                            ],
+                            "env_from": [],
+                            "image": "717279688908.dkr.ecr.us-east-1.amazonaws.com/repositorio:v10",
+                            "image_pull_policy": "IfNotPresent",
+                            "lifecycle": [],
+                            "liveness_probe": [
+                              {
+                                "exec": [],
+                                "failure_threshold": 3,
+                                "grpc": [],
+                                "http_get": [
+                                  {
+                                    "host": "",
+                                    "http_header": [],
+                                    "path": "/api/v1/actuator/health",
+                                    "port": "8080",
+                                    "scheme": "HTTP"
+                                  }
+                                ],
+                                "initial_delay_seconds": 120,
+                                "period_seconds": 10,
+                                "success_threshold": 1,
+                                "tcp_socket": [],
+                                "timeout_seconds": 5
+                              }
+                            ],
+                            "name": "pedido",
+                            "port": [
+                              {
+                                "container_port": 8080,
+                                "host_ip": "",
+                                "host_port": 0,
+                                "name": "",
+                                "protocol": "TCP"
+                              }
+                            ],
+                            "readiness_probe": [],
+                            "resources": [
+                              {
+                                "limits": {
+                                  "cpu": "1",
+                                  "memory": "1Gi"
+                                },
+                                "requests": {
+                                  "cpu": "500m",
+                                  "memory": "250Mi"
+                                }
+                              }
+                            ],
+                            "security_context": [],
+                            "startup_probe": [],
+                            "stdin": false,
+                            "stdin_once": false,
+                            "termination_message_path": "/dev/termination-log",
+                            "termination_message_policy": "File",
+                            "tty": false,
+                            "volume_device": [],
+                            "volume_mount": [],
+                            "working_dir": ""
+                          }
+                        ],
+                        "dns_config": [],
+                        "dns_policy": "ClusterFirst",
+                        "enable_service_links": true,
+                        "host_aliases": [],
+                        "host_ipc": false,
+                        "host_network": false,
+                        "host_pid": false,
+                        "hostname": "",
+                        "image_pull_secrets": [],
+                        "init_container": [],
+                        "node_name": "",
+                        "node_selector": {},
+                        "os": [],
+                        "priority_class_name": "",
+                        "readiness_gate": [],
+                        "restart_policy": "Always",
+                        "runtime_class_name": "",
+                        "scheduler_name": "default-scheduler",
+                        "security_context": [],
+                        "service_account_name": "db-pedido-dynamodb-account",
+                        "share_process_namespace": false,
+                        "subdomain": "",
+                        "termination_grace_period_seconds": 30,
+                        "toleration": [],
+                        "topology_spread_constraint": [],
+                        "volume": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "timeouts": null,
+            "wait_for_rollout": true
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6NjAwMDAwMDAwMDAwLCJ1cGRhdGUiOjYwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMSJ9",
+          "dependencies": [
+            "aws_dynamodb_table.pedido_table",
+            "aws_iam_role.db_pedido_dynamodb_access_role",
+            "data.aws_eks_cluster.default",
+            "data.aws_eks_cluster_auth.default",
+            "kubernetes_service_account.db_pedido_dynamodb_account"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "kubernetes_horizontal_pod_autoscaler",
+      "name": "pedido_hpa",
+      "provider": "provider[\"registry.terraform.io/hashicorp/kubernetes\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "default/pedido-hpa",
+            "metadata": [
+              {
+                "annotations": {},
+                "generate_name": "",
+                "generation": 0,
+                "labels": {},
+                "name": "pedido-hpa",
+                "namespace": "default",
+                "resource_version": "17812",
+                "uid": "3b377f06-9ad2-4b09-b7da-ca640edfc503"
+              }
+            ],
+            "spec": [
+              {
+                "behavior": [],
+                "max_replicas": 10,
+                "metric": [],
+                "min_replicas": 1,
+                "scale_target_ref": [
+                  {
+                    "api_version": "apps/v1",
+                    "kind": "Deployment",
+                    "name": "pedido"
+                  }
+                ],
+                "target_cpu_utilization_percentage": 70
+              }
+            ]
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "aws_dynamodb_table.pedido_table",
+            "aws_iam_role.db_pedido_dynamodb_access_role",
+            "data.aws_eks_cluster.default",
+            "data.aws_eks_cluster_auth.default",
+            "kubernetes_deployment.pedido-api",
+            "kubernetes_service_account.db_pedido_dynamodb_account"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "kubernetes_service",
+      "name": "pedido_service",
+      "provider": "provider[\"registry.terraform.io/hashicorp/kubernetes\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "id": "default/pedido-service",
+            "metadata": [
+              {
+                "annotations": {},
+                "generate_name": "",
+                "generation": 0,
+                "labels": {
+                  "app": "pedido"
+                },
+                "name": "pedido-service",
+                "namespace": "default",
+                "resource_version": "17711",
+                "uid": "8accbf94-de72-4642-bf8a-1fa0cdac20e5"
+              }
+            ],
+            "spec": [
+              {
+                "allocate_load_balancer_node_ports": true,
+                "cluster_ip": "10.100.118.39",
+                "cluster_ips": [
+                  "10.100.118.39"
+                ],
+                "external_ips": [],
+                "external_name": "",
+                "external_traffic_policy": "",
+                "health_check_node_port": 0,
+                "internal_traffic_policy": "Cluster",
+                "ip_families": [
+                  "IPv4"
+                ],
+                "ip_family_policy": "SingleStack",
+                "load_balancer_class": "",
+                "load_balancer_ip": "",
+                "load_balancer_source_ranges": [],
+                "port": [
+                  {
+                    "app_protocol": "",
+                    "name": "",
+                    "node_port": 0,
+                    "port": 80,
+                    "protocol": "TCP",
+                    "target_port": "8080"
+                  }
+                ],
+                "publish_not_ready_addresses": false,
+                "selector": {
+                  "app": "pedido"
+                },
+                "session_affinity": "None",
+                "session_affinity_config": [],
+                "type": "ClusterIP"
+              }
+            ],
+            "status": [
+              {
+                "load_balancer": [
+                  {
+                    "ingress": []
+                  }
+                ]
+              }
+            ],
+            "timeouts": null,
+            "wait_for_load_balancer": true
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDB9LCJzY2hlbWFfdmVyc2lvbiI6IjEifQ==",
+          "dependencies": [
+            "data.aws_eks_cluster.default",
+            "data.aws_eks_cluster_auth.default"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "kubernetes_service_account",
+      "name": "db_pedido_dynamodb_account",
+      "provider": "provider[\"registry.terraform.io/hashicorp/kubernetes\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "automount_service_account_token": true,
+            "default_secret_name": "",
+            "id": "default/db-pedido-dynamodb-account",
+            "image_pull_secret": [],
+            "metadata": [
+              {
+                "annotations": {
+                  "eks.amazonaws.com/role-arn": "arn:aws:iam::717279688908:role/dynamodb-role"
+                },
+                "generate_name": "",
+                "generation": 0,
+                "labels": {},
+                "name": "db-pedido-dynamodb-account",
+                "namespace": "default",
+                "resource_version": "17716",
+                "uid": "d5b60fbb-c4d4-4997-a343-f8ef4bd0d4a5"
+              }
+            ],
+            "secret": [],
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "aws_iam_role.db_pedido_dynamodb_access_role",
+            "data.aws_eks_cluster.default",
+            "data.aws_eks_cluster_auth.default"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "null_resource",
+      "name": "init_dynamodb",
+      "provider": "provider[\"registry.terraform.io/hashicorp/null\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "7541964051868463702",
+            "triggers": null
+          },
+          "sensitive_attributes": [],
+          "dependencies": [
+            "aws_dynamodb_table.pedido_table"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "tls_private_key",
+      "name": "tls_private",
+      "provider": "provider[\"registry.terraform.io/hashicorp/tls\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "algorithm": "RSA",
+            "ecdsa_curve": "P384",
+            "id": "db2e27526c2500ffdc82257625cddc7683bd40b6",
+            "private_key_openssh": "-----BEGIN OPENSSH PRIVATE KEY-----\nb3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAABFwAAAAdz\nc2gtcnNhAAAAAwEAAQAAAQEAvY9OmJ0Uj96yclWZP8eEJ3YJO5e8Q4YaJOrAGeRZ\nnGZ0C3Jo4zHyCu9NlHh34hHxuPU1k6x4E8XGpVlFuVX6yiU4EEJeUhVkK8tY7s8y\nzEZOu/uWJEDxSk1eG2eKxVWLwyyyzMj4E1fBk6n3s+RjQ/nCPXXSs61VU+s353P4\nG09ThaujjO4u3zqpdzpc6A8/WjneO15jrMrsy7tvBbpz/eZ2h3yXPfaTMBxSCkxn\nVegtl+Q/k9GrRDtD0BYahbXNL/IgpAHJBj24Mikot0yPg+1Xf136MgL6xh3EnjfF\nlGzXvR1rc8exgyPfNXKNPwNsdHXUNZn5IFE7UHQ8fNUCfwAAA7hM8UabTPFGmwAA\nAAdzc2gtcnNhAAABAQC9j06YnRSP3rJyVZk/x4Qndgk7l7xDhhok6sAZ5FmcZnQL\ncmjjMfIK702UeHfiEfG49TWTrHgTxcalWUW5VfrKJTgQQl5SFWQry1juzzLMRk67\n+5YkQPFKTV4bZ4rFVYvDLLLMyPgTV8GTqfez5GND+cI9ddKzrVVT6zfnc/gbT1OF\nq6OM7i7fOql3OlzoDz9aOd47XmOsyuzLu28FunP95naHfJc99pMwHFIKTGdV6C2X\n5D+T0atEO0PQFhqFtc0v8iCkAckGPbgyKSi3TI+D7Vd/XfoyAvrGHcSeN8WUbNe9\nHWtzx7GDI981co0/A2x0ddQ1mfkgUTtQdDx81QJ/AAAAAwEAAQAAAQEAnwWQ1uC3\n9jXJl7cNl/7Fc+FGv5J8Yl0mo5+3xkDVmCou4cd6DFbDCb9VYt9pGuMY2KQE7Ty7\ng0LgcaghoOhrOpfcn2899zhwz3iIw9ZYdBvrQzI8827zvPSIpQ7I0OECHZrq6HcT\n/g4Zm8nzvhsz1zu4YpzsRMV9lqf2Pxn/otAF8cRV7oowxVJ4XMzDRq01c9j8vplB\nhEKT2a9II+vAwCGRAx4rYTqDDMbeu1PH59yNmXMpDlq/ErIXIUkXX7dfB+NcDKLv\nuVRSyqLS2+quecGE20EmN3/qA4n7hpnr7T1s4Rk7gSCfv+mz6S0aApYsd1q+wMUe\nj6Lf/F25XcOVuQAAAIAPfwsMe6VFXf/pGDC21pajMvqX0RYNsc09ljhQr2COM+q0\nJn7DhVnTBFKjsQoH61cZvOKsoQjnHlsajG5B/d8CirYh4LE04/1iFDQEqUTy8W6S\nDLKdO0CA5yPcTpY5AOelLkwRHztUgsDYva5Hxw28CzkVfa9LkLgp3JZVoAR6WgAA\nAIEAwnP4yUjvnOKo1ffllq+0kC/S8TN179pA2+nOaW89XyPOEfyMGul3hJK6eST1\nuZVoAXrDoO0GbH+ho+KP6Bo1WTggLbIempnQRBZ2fqmh7sUk1J9W7CUt2D5f+5D0\nJmvoQBFn+sFQRxEEWVnunPMPq+1WNgdMvKu0lJaUjU/98GMAAACBAPmO2ZlptJWh\nTym9lLlQvxe0WSZVYnPEz+HhYDTDx/msa4C3B36xkUHiW1EUTMTbuVvwWUL08lLf\nNdE2mEigd/hpSvspzibWT+dptQNuxrocYUl5FxbNDeXRqRZzfw103bRiQ5hPu7Jb\nBWDh1q9wscDKcGGeSqG47W5ReJXQhio1AAAAAAEC\n-----END OPENSSH PRIVATE KEY-----\n",
+            "private_key_pem": "-----BEGIN RSA PRIVATE KEY-----\nMIIEpAIBAAKCAQEAvY9OmJ0Uj96yclWZP8eEJ3YJO5e8Q4YaJOrAGeRZnGZ0C3Jo\n4zHyCu9NlHh34hHxuPU1k6x4E8XGpVlFuVX6yiU4EEJeUhVkK8tY7s8yzEZOu/uW\nJEDxSk1eG2eKxVWLwyyyzMj4E1fBk6n3s+RjQ/nCPXXSs61VU+s353P4G09Thauj\njO4u3zqpdzpc6A8/WjneO15jrMrsy7tvBbpz/eZ2h3yXPfaTMBxSCkxnVegtl+Q/\nk9GrRDtD0BYahbXNL/IgpAHJBj24Mikot0yPg+1Xf136MgL6xh3EnjfFlGzXvR1r\nc8exgyPfNXKNPwNsdHXUNZn5IFE7UHQ8fNUCfwIDAQABAoIBAQCfBZDW4Lf2NcmX\ntw2X/sVz4Ua/knxiXSajn7fGQNWYKi7hx3oMVsMJv1Vi32ka4xjYpATtPLuDQuBx\nqCGg6Gs6l9yfbz33OHDPeIjD1lh0G+tDMjzzbvO89IilDsjQ4QIdmurodxP+Dhmb\nyfO+GzPXO7hinOxExX2Wp/Y/Gf+i0AXxxFXuijDFUnhczMNGrTVz2Py+mUGEQpPZ\nr0gj68DAIZEDHithOoMMxt67U8fn3I2ZcykOWr8SshchSRdft18H41wMou+5VFLK\notLb6q55wYTbQSY3f+oDifuGmevtPWzhGTuBIJ+/6bPpLRoClix3Wr7AxR6Pot/8\nXbldw5W5AoGBAMJz+MlI75ziqNX35ZavtJAv0vEzde/aQNvpzmlvPV8jzhH8jBrp\nd4SSunkk9bmVaAF6w6DtBmx/oaPij+gaNVk4IC2yHpqZ0EQWdn6poe7FJNSfVuwl\nLdg+X/uQ9CZr6EARZ/rBUEcRBFlZ7pzzD6vtVjYHTLyrtJSWlI1P/fBjAoGBAPmO\n2ZlptJWhTym9lLlQvxe0WSZVYnPEz+HhYDTDx/msa4C3B36xkUHiW1EUTMTbuVvw\nWUL08lLfNdE2mEigd/hpSvspzibWT+dptQNuxrocYUl5FxbNDeXRqRZzfw103bRi\nQ5hPu7JbBWDh1q9wscDKcGGeSqG47W5ReJXQhio1AoGBAKMMrXrSXqD1ac7oq6nb\nsRMKFt3LYcP6BVKhTUQZU6O4GS35zt0uENqoUhYMyMKRpgE/mFQTC8TkjHwoGLTt\nbPhf2JOYfJL0EK9XCosQ4EifJE/pP/CJCFT/kGoX1LF23+sA7WhUumSsvzHQ+ATA\nxs5KF3T8T/sQGz5QuUV44pyzAoGAKIEsBj9m5QZaf+7aTb2yVlmaQqOHKD0gdIwM\n/mNseLSoeiq617BgYC4qHh3KXAVBr49yHXD+R78c0AkpbFhHQJVuaxec8ybDr06z\n54u6S4jBrZguzC+Z+twtsowqafe26EkuqXD/iPJHDDN7kdwbravt05pKiLcoKkik\n5sQCkqUCgYAPfwsMe6VFXf/pGDC21pajMvqX0RYNsc09ljhQr2COM+q0Jn7DhVnT\nBFKjsQoH61cZvOKsoQjnHlsajG5B/d8CirYh4LE04/1iFDQEqUTy8W6SDLKdO0CA\n5yPcTpY5AOelLkwRHztUgsDYva5Hxw28CzkVfa9LkLgp3JZVoAR6Wg==\n-----END RSA PRIVATE KEY-----\n",
+            "private_key_pem_pkcs8": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC9j06YnRSP3rJy\nVZk/x4Qndgk7l7xDhhok6sAZ5FmcZnQLcmjjMfIK702UeHfiEfG49TWTrHgTxcal\nWUW5VfrKJTgQQl5SFWQry1juzzLMRk67+5YkQPFKTV4bZ4rFVYvDLLLMyPgTV8GT\nqfez5GND+cI9ddKzrVVT6zfnc/gbT1OFq6OM7i7fOql3OlzoDz9aOd47XmOsyuzL\nu28FunP95naHfJc99pMwHFIKTGdV6C2X5D+T0atEO0PQFhqFtc0v8iCkAckGPbgy\nKSi3TI+D7Vd/XfoyAvrGHcSeN8WUbNe9HWtzx7GDI981co0/A2x0ddQ1mfkgUTtQ\ndDx81QJ/AgMBAAECggEBAJ8FkNbgt/Y1yZe3DZf+xXPhRr+SfGJdJqOft8ZA1Zgq\nLuHHegxWwwm/VWLfaRrjGNikBO08u4NC4HGoIaDoazqX3J9vPfc4cM94iMPWWHQb\n60MyPPNu87z0iKUOyNDhAh2a6uh3E/4OGZvJ874bM9c7uGKc7ETFfZan9j8Z/6LQ\nBfHEVe6KMMVSeFzMw0atNXPY/L6ZQYRCk9mvSCPrwMAhkQMeK2E6gwzG3rtTx+fc\njZlzKQ5avxKyFyFJF1+3XwfjXAyi77lUUsqi0tvqrnnBhNtBJjd/6gOJ+4aZ6+09\nbOEZO4Egn7/ps+ktGgKWLHdavsDFHo+i3/xduV3DlbkCgYEAwnP4yUjvnOKo1ffl\nlq+0kC/S8TN179pA2+nOaW89XyPOEfyMGul3hJK6eST1uZVoAXrDoO0GbH+ho+KP\n6Bo1WTggLbIempnQRBZ2fqmh7sUk1J9W7CUt2D5f+5D0JmvoQBFn+sFQRxEEWVnu\nnPMPq+1WNgdMvKu0lJaUjU/98GMCgYEA+Y7ZmWm0laFPKb2UuVC/F7RZJlVic8TP\n4eFgNMPH+axrgLcHfrGRQeJbURRMxNu5W/BZQvTyUt810TaYSKB3+GlK+ynOJtZP\n52m1A27GuhxhSXkXFs0N5dGpFnN/DXTdtGJDmE+7slsFYOHWr3CxwMpwYZ5Kobjt\nblF4ldCGKjUCgYEAowytetJeoPVpzuirqduxEwoW3cthw/oFUqFNRBlTo7gZLfnO\n3S4Q2qhSFgzIwpGmAT+YVBMLxOSMfCgYtO1s+F/Yk5h8kvQQr1cKixDgSJ8kT+k/\n8IkIVP+QahfUsXbf6wDtaFS6ZKy/MdD4BMDGzkoXdPxP+xAbPlC5RXjinLMCgYAo\ngSwGP2blBlp/7tpNvbJWWZpCo4coPSB0jAz+Y2x4tKh6KrrXsGBgLioeHcpcBUGv\nj3IdcP5HvxzQCSlsWEdAlW5rF5zzJsOvTrPni7pLiMGtmC7ML5n63C2yjCpp97bo\nSS6pcP+I8kcMM3uR3Butq+3TmkqItygqSKTmxAKSpQKBgA9/Cwx7pUVd/+kYMLbW\nlqMy+pfRFg2xzT2WOFCvYI4z6rQmfsOFWdMEUqOxCgfrVxm84qyhCOceWxqMbkH9\n3wKKtiHgsTTj/WIUNASpRPLxbpIMsp07QIDnI9xOljkA56UuTBEfO1SCwNi9rkfH\nDbwLORV9r0uQuCncllWgBHpa\n-----END PRIVATE KEY-----\n",
+            "public_key_fingerprint_md5": "ec:fa:30:40:cc:79:98:82:fd:18:5f:66:95:e6:84:b6",
+            "public_key_fingerprint_sha256": "SHA256:ROUCF+fzmhcpMp/jUykFrgmlxE5SHWUx7gLDE2X/vKM",
+            "public_key_openssh": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC9j06YnRSP3rJyVZk/x4Qndgk7l7xDhhok6sAZ5FmcZnQLcmjjMfIK702UeHfiEfG49TWTrHgTxcalWUW5VfrKJTgQQl5SFWQry1juzzLMRk67+5YkQPFKTV4bZ4rFVYvDLLLMyPgTV8GTqfez5GND+cI9ddKzrVVT6zfnc/gbT1OFq6OM7i7fOql3OlzoDz9aOd47XmOsyuzLu28FunP95naHfJc99pMwHFIKTGdV6C2X5D+T0atEO0PQFhqFtc0v8iCkAckGPbgyKSi3TI+D7Vd/XfoyAvrGHcSeN8WUbNe9HWtzx7GDI981co0/A2x0ddQ1mfkgUTtQdDx81QJ/\n",
+            "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvY9OmJ0Uj96yclWZP8eE\nJ3YJO5e8Q4YaJOrAGeRZnGZ0C3Jo4zHyCu9NlHh34hHxuPU1k6x4E8XGpVlFuVX6\nyiU4EEJeUhVkK8tY7s8yzEZOu/uWJEDxSk1eG2eKxVWLwyyyzMj4E1fBk6n3s+Rj\nQ/nCPXXSs61VU+s353P4G09ThaujjO4u3zqpdzpc6A8/WjneO15jrMrsy7tvBbpz\n/eZ2h3yXPfaTMBxSCkxnVegtl+Q/k9GrRDtD0BYahbXNL/IgpAHJBj24Mikot0yP\ng+1Xf136MgL6xh3EnjfFlGzXvR1rc8exgyPfNXKNPwNsdHXUNZn5IFE7UHQ8fNUC\nfwIDAQAB\n-----END PUBLIC KEY-----\n",
+            "rsa_bits": 2048
+          },
+          "sensitive_attributes": [
+            [
+              {
+                "type": "get_attr",
+                "value": "private_key_pem"
+              }
+            ],
+            [
+              {
+                "type": "get_attr",
+                "value": "private_key_openssh"
+              }
+            ],
+            [
+              {
+                "type": "get_attr",
+                "value": "private_key_pem_pkcs8"
+              }
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "check_results": null
+}
