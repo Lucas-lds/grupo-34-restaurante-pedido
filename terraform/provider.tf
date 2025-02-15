@@ -16,13 +16,11 @@ provider "aws" {
 }
 
 data "aws_eks_cluster" "default" {
-  name       = var.cluster_name
-  depends_on = [aws_eks_cluster.eks-cluster]
+  name = var.cluster_name
 }
 
 data "aws_eks_cluster_auth" "default" {
-  name       = var.cluster_name
-  depends_on = [aws_eks_cluster.eks-cluster]
+  name = var.cluster_name
 }
 
 provider "kubernetes" {
