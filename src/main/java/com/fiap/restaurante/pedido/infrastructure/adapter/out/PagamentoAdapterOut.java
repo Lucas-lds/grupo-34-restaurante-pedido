@@ -1,7 +1,6 @@
 package com.fiap.restaurante.pedido.infrastructure.adapter.out;
 
 import com.fiap.restaurante.pedido.application.port.out.PagamentoPortOut;
-import com.fiap.restaurante.pedido.core.domain.Pedido;
 import com.fiap.restaurante.pedido.infrastructure.adapter.in.request.PagamentoRequest;
 import com.fiap.restaurante.pedido.infrastructure.adapter.out.entity.PedidoEntity;
 import lombok.extern.log4j.Log4j2;
