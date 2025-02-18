@@ -73,7 +73,8 @@ public class PedidoRepositoryImpl implements PedidoRepository {
                 }).collect(Collectors.toList());
     }
 
-    private int getStatusPriority(String status) {
+    public int getStatusPriority(String status) {
+
         return switch (status) {
             case "DONE" -> 1;
             case "PREPARING" -> 2;
